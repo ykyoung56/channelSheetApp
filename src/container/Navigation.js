@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/Navigation.css";
 
 export default function Navigation(props) {

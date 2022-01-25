@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import Information from "./container/Information";
 import Navigation from "./container/Navigation";
 import ChannelSheet from "./container/ChannelSheet";
