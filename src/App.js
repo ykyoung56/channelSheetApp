@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import react, { useState } from "react";
+import Information from "./container/Information";
+import Navigation from "./container/Navigation";
+import ChannelSheet from "./container/ChannelSheet";
+import "./App.css";
 
 function App() {
+  const [menu, setMenu] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="app">
+        <div className="title">CONSOLE CHANNEL SHEET</div>
+        <div className="information">
+          <Information />
+        </div>
+        <div className="navigation">
+          <Navigation menu={menu} setMenu={setMenu} />
+        </div>
+        <div className="channelSheet">
+          <ChannelSheet menu={menu} />
+        </div>
+      </div>
     </div>
   );
 }
