@@ -5,3 +5,24 @@
 .hide {
   display: none;
 }
+
+.input-list-columns {
+  display: grid;
+  grid-template-columns: 50px 3fr 2fr 1fr;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.input-list-rows {
+  border-left: 1px #30475e dashed;
+}
+
+.list-name {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #30475e;
+}
+
+.no {
+  border-left: 0px;
+}
