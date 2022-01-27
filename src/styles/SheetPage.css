@@ -15,12 +15,18 @@
 
 .input-list-rows {
   border-left: 1px #30475e dashed;
+  text-align: center;
 }
 
 .list-name {
   font-size: 1.1rem;
   font-weight: bolder;
   color: #30475e;
+}
+
+.plus-button {
+  margin-top: 7px;
+  margin-left: 13px;
 }
 
 .no {
