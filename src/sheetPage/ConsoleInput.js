@@ -1,23 +1,23 @@
 import "../styles/SheetPage.css";
 
-export default function Input(props) {
-  const PlusList = (inputList, setInputList) => {
-    const list = inputList.slice();
+export default function ConsoleInput(props) {
+  const PlusList = (consoleInputList, setConsoleInputList) => {
+    const list = consoleInputList.slice();
     list.push({
-      inputNo: list.length + 1,
-      inputInstrument: "",
-      inputMic: "",
-      inputEtc: "",
+      consoleInputNo: list.length + 1,
+      consoleInputInstrument: "",
+      consoleInputMic: "",
+      consoleInputEtc: "",
     });
-    setInputList(list);
+    setConsoleInputList(list);
   };
 
   return (
-    <div className={props.menu === 0 ? "show" : "hide"}>
+    <div className={props.menu === 2 ? "show" : "hide"}>
       <div className="plus-button">
         <button
           onClick={() => {
-            PlusList(props.inputList, props.setInputList);
+            PlusList(props.consoleInputList, props.setConsoleInputList);
           }}
         >
           +
@@ -29,31 +29,31 @@ export default function Input(props) {
         <span className="list-rows mic">Mic</span>
         <span className="list-rows etc">Etc.</span>
       </div>
-      <MapList mapList={props.inputList} />
+      <MapList mapList={props.consoleInputList} />
     </div>
   );
 }
 
 const MapList = (props) =>
   props.mapList.map((element) => {
-    return <MakeList mapList={element} key={element.inputNo} />;
+    return <MakeList mapList={element} key={element.consoleInputNo} />;
   });
 
 const MakeList = (props) => {
   return (
     <div className="inputList list-columns">
-      <div className="list-rows no">{props.mapList.inputNo}</div>
+      <div className="list-rows no">{props.mapList.consoleInputNo}</div>
       <input
         className="list-rows instrument"
-        placeholder={props.mapList.inputInstrument}
+        placeholder={props.mapList.consoleInputInstrument}
       ></input>
       <input
         className="list-rows mic"
-        placeholder={props.mapList.inputMic}
+        placeholder={props.mapList.consoleInputMic}
       ></input>
       <input
         className="list-rows etc"
-        placeholder={props.mapList.inputEtc}
+        placeholder={props.mapList.consoleInputEtc}
       ></input>
     </div>
   );

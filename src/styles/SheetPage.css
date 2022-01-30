@@ -6,14 +6,21 @@
   display: none;
 }
 
-.input-list-columns {
-  display: grid;
+.inputList {
   grid-template-columns: 50px 3fr 2fr 1fr;
+}
+
+.outputList {
+  grid-template-columns: 50px 5fr 4fr 1fr;
+}
+
+.list-columns {
+  display: grid;
   text-align: center;
   margin-top: 1px;
 }
 
-.input-list-rows {
+.list-rows {
   border-left: 1px #30475e dashed;
   text-align: center;
 }
